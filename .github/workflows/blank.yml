@@ -26,23 +26,23 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-            - name: Setup jfrog
-        uses: jfrog/setup-jfrog-cli@v3
-        with:
+    - name: Setup jfrog
+      uses: jfrog/setup-jfrog-cli@v3
+      with:
           version: latest
-        env:
+      env:
           JF_URL: ${{ secret.VINCEURL }}
           JF_USER: ${{ secret.VINCEUSER }}
           JF_ACCESS_TOKEN: ${{ secret.VINCETOKEN_JF }}
     
-            - name: archive creation
-        run: |
+    - name: archive creation
+       run: |
           jf rt u "**" generic-lovcal/Vince.zip --archive zip --include-dirs |
           jf rt bp generic_local/Vince.zip
 
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+    - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
