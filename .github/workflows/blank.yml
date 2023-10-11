@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "" ]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,9 +31,9 @@ jobs:
         with:
           version: latest
         env:
-          JF_URL: ${{ secret.JFROG_URL }}
-          JF_USER: ${{ secret.JFROG_USR }}
-          JF_ACCESS_TOKEN: ${{ secret.JFROG_TOKEN }}
+          JF_URL: ${{ secret.VINCEURL }}
+          JF_USER: ${{ secret.VINCEUSER }}
+          JF_ACCESS_TOKEN: ${{ secret.VINCETOKEN_JF }}
     
       - name: archive creation
         run: |
