@@ -19,8 +19,8 @@ on:
           JF_URL: ${{ secrets.VINCEURL }}
           JF_USER: ${{ secrets.VINCEUSER }}
           JF_ACCESS_TOKEN: ${{ secrets.VINCETOKEN_JF }}
-    - name: archive creation
+    - name: archive creatio
       run: |
-          jf rt u "**" generic-lovcal/Vince.zip --archive zip --include-dirs |
-          jf rt bp generic_local/Vince.zip
+        jf rt u "**" generic-lovcal/Vince.zip --archive zip --include-dirs |
+        jf rt bp generic_local/Vince.zip
    
