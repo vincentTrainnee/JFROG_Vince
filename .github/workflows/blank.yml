@@ -20,10 +20,7 @@ on:
           JF_USER: ${{ secrets.VINCEUSER }}
           JF_ACCESS_TOKEN: ${{ secrets.VINCETOKEN_JF }}
     - name: archive creation
-       run: |
+      run: |
           jf rt u "**" generic-lovcal/Vince.zip --archive zip --include-dirs |
           jf rt bp generic_local/Vince.zip
-    - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+   
