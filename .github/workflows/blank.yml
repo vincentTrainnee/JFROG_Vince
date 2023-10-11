@@ -35,7 +35,7 @@ jobs:
           JF_USER: ${{ secret.VINCEUSER }}
           JF_ACCESS_TOKEN: ${{ secret.VINCETOKEN_JF }}
     
-      - name: archive creation
+            - name: archive creation
         run: |
           jf rt u "**" generic-lovcal/Vince.zip --archive zip --include-dirs |
           jf rt bp generic_local/Vince.zip
