@@ -10,7 +10,7 @@ on:
     build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     - name: Setup jfrog
       uses: jfrog/setup-jfrog-cli@v3
       with:
